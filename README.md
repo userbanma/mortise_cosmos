@@ -6,7 +6,7 @@
 
 《Mortise-Cosmos》是一款基于 Web 的交互式传统木构建筑营造体验作品。用户通过摄像头手势识别或鼠标操作，在画面中拖拽、拼接榫卯构件，体验中国传统木构建筑的节点工艺，感受"榫卯相合，万象更新"的营造智慧。
 
-![项目截图](https://raw.githubusercontent.com/userbanma/mortise-cosmos/main/assets/screenshot.png)
+![项目截图](assets/screenshot.png)
 
 ## 技术栈
 
