@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>榫合万象 - 平面古建营造交互作品</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 启动遮罩 -->
+  <div id="start-overlay">
+    <h2>榫合万象</h2>
+    <p>
+      先拼榫卯成梁，再立柱架阁——体验传统木构搭建<br>
+      摄像头仅用于本地手势识别，视频不会上传
+    </p>
+    <button class="start-btn" onclick="startApp()">开启体验</button>
+  </div>
+
+  <!-- 摄像头层 -->
+  <div id="camera-layer">
+    <video id="camera-video" autoplay playsinline muted></video>
+  </div>
+
+  <!-- 主画布 -->
+  <canvas id="main-canvas"></canvas>
+
+  <!-- 手势光标 -->
+  <div id="hand-cursor"></div>
+
+  <!-- UI层 -->
+  <div id="ui-layer">
+    <!-- 阶段教程面板（左上角） -->
+    <div class="guide-panel" id="guide-panel">
+      <div class="controls" style="margin-bottom: 6px; color: #a08060;">
+        捏合/点击构件可查看介绍
+      </div>
+      <div class="stage-title" id="guide-stage">阶段一</div>
+      <div class="task" id="guide-task">请将燕尾榫拖向燕尾卯完成嵌合</div>
+      <hr class="divider">
+      <div class="controls">
+        <strong>手势：</strong>食指拇指捏合拖拽<br>
+        <strong>鼠标：</strong>按住左键拖拽
+      </div>
+    </div>
+
+    <div class="title-bar">
+      <h1>榫合万象</h1>
+      <p>平面古建营造交互作品</p>
+    </div>
+
+    <div class="score-panel">
+      <div class="label">营造值</div>
+      <div class="value" id="score-value">0</div>
+    </div>
+
+    <div class="bottom-bar">
+      <button class="btn" onclick="resetBuild()">重置</button>
+      <button class="btn" onclick="toggleGuide()">营造图鉴</button>
+      <button class="btn primary" id="btn-phase2" style="display:none" onclick="initPhase2()">自由搭建</button>
+      <button class="btn primary" onclick="exportSVG()">导出插画</button>
+    </div>
+
+    <div class="hint-box" id="hint-box"></div>
+  </div>
+
+  <!-- 脚本 -->
+  <!-- MediaPipe Hands 从 CDN 加载（减小仓库体积） -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1675469240/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils@0.3.1675466862/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils@0.3.1675466124/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="js/state.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/gesture.js"></script>
+  <script src="js/rendering.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
