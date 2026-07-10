@@ -549,7 +549,7 @@ function initPhase2() {
     });
   });
 
-  showHint('【阶段二 - 自由搭建】用各种构件自由搭建传统木构建筑！按R键可旋转构件。');
+  showHint('【阶段二 - 自由搭建】用各种构件自由搭建传统木构建筑！');
 }
 
 function resetBuild() {
