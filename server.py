@@ -4,8 +4,6 @@
 榫合万象 - 本地启动服务器
 用 Python 内置 http.server 启动项目，解决 MediaPipe WASM 文件加载问题
 使用 config.py 管理配置，handler.py 管理请求处理逻辑
-作者: [你的名字]
-课程: AI应用素养
 """
 
 import socketserver
