@@ -770,7 +770,7 @@ function drawPatternOverlay(ctx, comp, halfW, halfH) {
     ctx.beginPath();
     roundRect(ctx, -halfW, -halfH, halfW * 2, halfH * 2, 4);
     ctx.clip();
-    ctx.globalAlpha = 0.2;
+    ctx.globalAlpha = 0.35;
 
     const srcSize = Math.min(iw, ih) * 0.5;
     const srcX = (iw - srcSize) / 2;
