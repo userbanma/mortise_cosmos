@@ -464,7 +464,7 @@ function initPhase2() {
       category: '自由搭建', x: cx + 350, y: baseY,
       width: sz.w, height: sz.h, rotation: 0, matched: false,
       unlocks: [], description: '燕尾卯 - ' + sz.label + '号构件',
-      briefNote: '口阔腹窄，请君入瓮。',
+      briefNote: '口窄腹阔，请君入瓮。',
       origin: '燕尾卯需逆燕尾之形而凿。',
       rules: { mateWith: ['p2_yw_' + si], tolerance: 90, angleTolerance: 15 },
       color: '#7a6548', groupId: null, sizeKey: 'yw' + si,
